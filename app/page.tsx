@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/HeroSection';
 
 export default function Home() {
   return (
-    <main className="bg-white text-black">
+    <main className="">
       <Header />
       {/* <HeroSection /> */}
       {/* <AboutSection /> */}
