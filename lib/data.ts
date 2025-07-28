@@ -46,22 +46,23 @@ export interface WorkExperience {
 
 export const personalInfo: PersonalInfo = {
   name: 'Alex Huaracha',
-  title: 'Developer',
   email: 'alexhuarachaq@gmail.com',
   location: 'Arequipa, Peru',
   phone: '(+51) 962-334-712',
+  title: 'I am a Developer',
   about:
     'Software developer passionate about building innovative applications and solving complex problems through code. I focus on creating efficient, scalable solutions while continuously expanding my knowledge of modern development technologies.',
 };
 
 export const technologies: Technology[] = [
-  { name: 'JavaScript', icon: 'javascript' },
   { name: 'TypeScript', icon: 'typescript' },
+  { name: 'JavaScript', icon: 'javascript' },
   { name: 'React', icon: 'react' },
   { name: 'Node.js', icon: 'nodejs' },
   { name: 'Next.js', icon: 'nextjs' },
   { name: 'Tailwind CSS', icon: 'tailwindcss' },
   { name: 'Git', icon: 'git' },
+  { name: 'PostgreSQL', icon: 'postgresql' },
 ];
 
 // To change
