@@ -3,12 +3,14 @@ import HeroSection from '@/components/sections/HeroSection';
 
 export default function Home() {
   return (
-    <main className="">
+    <div className="flex flex-col items-center justify-center">
       <Header />
-      <HeroSection />
+      <div className="">
+        <HeroSection />
+      </div>
       {/* <AboutSection /> */}
       {/* <ProjectsSection /> */}
       {/* <ExperienceSection /> */}
-    </main>
+    </div>
   );
 }

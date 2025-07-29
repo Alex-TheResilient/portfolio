@@ -5,3 +5,9 @@
 @theme inline {
   --font-display-pacifico: var(--font-pacifico);
 }
+
+@layer components {
+  .container {
+    @apply w-full mx-auto px-4
+  }
+}
