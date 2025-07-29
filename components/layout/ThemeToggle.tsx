@@ -38,14 +38,14 @@ export default function ThemeToggle() {
 
   console.log('Current theme:', theme);
   return (
-    <div className="shadow-md flex items-center space-x-1 p-1 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+    <div className="shadow-md flex items-center rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
       {/* Dark Mode */}
       <button
         onClick={() => setTheme('dark')}
         className={getButtonClasses(theme === 'dark')}
         aria-label="Dark Mode"
       >
-        <Moon className="w-5 h-5" />
+        <Moon className="w-4 h-4" />
       </button>
 
       {/* Light Mode */}
@@ -54,7 +54,7 @@ export default function ThemeToggle() {
         className={getButtonClasses(theme === 'light')}
         aria-label="Light Mode"
       >
-        <Sun className="w-5 h-5" />
+        <Sun className="w-4 h-4" />
       </button>
 
       {/* System Mode */}
@@ -63,7 +63,7 @@ export default function ThemeToggle() {
         className={getButtonClasses(theme === 'system')}
         aria-label="System Mode"
       >
-        <Monitor className="w-5 h-5" />
+        <Monitor className="w-4 h-4" />
       </button>
     </div>
   );
