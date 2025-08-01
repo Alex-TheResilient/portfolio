@@ -28,20 +28,14 @@ export interface Project {
   link: string;
 }
 
-export interface Education {
-  institution: string;
-  degree: string;
-  location: string;
-  graduationYear: number;
-  type: 'university' | 'course' | 'certification';
-}
-
-export interface WorkExperience {
-  company: string;
-  position: string;
+export interface Experience {
+  title: string;
+  subtitle: string;
   location: string;
   duration: string;
-  description: string;
+  description: string[];
+  type: 'work' | 'education';
+  technologies?: string[];
 }
 
 export const personalInfo: PersonalInfo = {
@@ -95,29 +89,52 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
-export const education: Education[] = [
+export const experiences: Experience[] = [
   {
-    institution: 'National University of Saint Augustine',
-    degree: 'Bachelor of System Engineering',
-    location: 'Arequipa, Peru',
-    graduationYear: 2025,
-    type: 'university',
-  },
-  {
-    institution: 'University of Helsinki',
-    degree: 'Full Stack Open 2024',
-    location: 'Online',
-    graduationYear: 2024,
-    type: 'course',
-  },
-];
-
-export const workExperience: WorkExperience[] = [
-  {
-    company: 'MOCAR',
-    position: 'Software Engineer',
+    title: 'MOCAR',
+    subtitle: 'Intern',
     location: 'Arequipa, Peru',
     duration: '2024 - 2025',
-    description: 'Developing web applications using modern frameworks.',
+    description: [
+      'I had the opportunity to intern at a technology company where I got to work on real-world software development projects. During my internship, I learned how to work in a team, manage my time, and apply my knowledge to solving real-world problems.',
+      'This was an important stepping stone to help me better understand the professional working environment and strengthen my skills.',
+    ],
+    type: 'work',
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Prisma', 'REST APIs'],
+  },
+  {
+    title: 'National University of Saint Augustine',
+    subtitle: 'Bachelor of System Engineering',
+    location: 'Arequipa, Peru',
+    duration: '2025',
+    description: [
+      'I had the opportunity to intern at a technology company where I got to work on real-world software development projects. During my internship, I learned how to work in a team, manage my time, and apply my knowledge to solving real-world problems.',
+      'These experiences nurtured a passion for technology and a willingness to adapt to change.',
+    ],
+    type: 'education',
+    technologies: ['Java', 'Python', 'SQL', 'Teamwork', 'Git/GitHub'],
+  },
+  {
+    title: 'University of Helsinki',
+    subtitle: 'Full Stack Open 2024',
+    location: 'Online',
+    duration: '2024',
+    description: [
+      'Comprehensive online course covering modern JavaScript-based web development with focus on single page applications.',
+      'Built REST APIs, worked with databases, and learned modern development practices including testing and deployment.',
+    ],
+    type: 'education',
+    technologies: [
+      'React',
+      'Redux',
+      'Node.js',
+      'MongoDB',
+      'GraphQL',
+      'TypeScript',
+      'JavaScript',
+      'Express.js',
+      'Jest',
+      'REST APIs',
+    ],
   },
 ];
