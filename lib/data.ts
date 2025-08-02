@@ -31,7 +31,6 @@ export interface Project {
 export interface Experience {
   title: string;
   subtitle: string;
-  location: string;
   duration: string;
   description: string[];
   type: 'work' | 'education';
@@ -93,7 +92,6 @@ export const experiences: Experience[] = [
   {
     title: 'MOCAR',
     subtitle: 'Intern',
-    location: 'Arequipa, Peru',
     duration: '2024 - 2025',
     description: [
       'I had the opportunity to intern at a technology company where I got to work on real-world software development projects. During my internship, I learned how to work in a team, manage my time, and apply my knowledge to solving real-world problems.',
@@ -105,7 +103,6 @@ export const experiences: Experience[] = [
   {
     title: 'National University of Saint Augustine',
     subtitle: 'Bachelor of System Engineering',
-    location: 'Arequipa, Peru',
     duration: '2025',
     description: [
       'I had the opportunity to intern at a technology company where I got to work on real-world software development projects. During my internship, I learned how to work in a team, manage my time, and apply my knowledge to solving real-world problems.',
@@ -117,7 +114,6 @@ export const experiences: Experience[] = [
   {
     title: 'University of Helsinki',
     subtitle: 'Full Stack Open 2024',
-    location: 'Online',
     duration: '2024',
     description: [
       'Comprehensive online course covering modern JavaScript-based web development with focus on single page applications.',
