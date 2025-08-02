@@ -113,8 +113,8 @@ export const experiences: Experience[] = [
   },
   {
     title: 'University of Helsinki',
-    subtitle: 'Full Stack Open 2024',
-    duration: '2024',
+    subtitle: 'Full Stack Open 2025',
+    duration: '2025',
     description: [
       'Comprehensive online course covering modern JavaScript-based web development with focus on single page applications.',
       'Built REST APIs, worked with databases, and learned modern development practices including testing and deployment.',
