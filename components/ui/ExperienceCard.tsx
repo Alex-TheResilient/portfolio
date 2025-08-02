@@ -8,19 +8,11 @@ interface ExperienceCardProps {
 export function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
     <div>
-      {/* Open Tag */}
-      <span className="inline-flex font-mono ml-2 text-cyan-500 dark:text-cyan-400">
-        <span className="dark:text-zinc-50">&lt;</span>
-        <span>{experience.type === 'work' ? 'Work' : 'Education'}</span>
-        <span className="dark:text-zinc-50">&gt;</span>
-      </span>
-
-      {/* Content */}
       {/* Vertical Line */}
       <div className="ml-2 text-sm text-balance border-l border-zinc-300 dark:border-zinc-700">
         <div className="relative ml-2 py-2">
           {/* Vertical Line */}
-          <div className="absolute left-3 top-0 h-full w-px bg-zinc-300 dark:bg-zinc-700"></div>
+          <div className="absolute left-3 top-6 bottom-2 w-px bg-zinc-300 dark:bg-zinc-700"></div>
           {/* Title*/}
           <div className="relative z-[2] mb-2 text-lg font-semibold">
             <div className="flex items-center gap-2">
@@ -61,12 +53,6 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           </div>
         </div>
       </div>
-      {/* Closing Tag */}
-      <span className="inline-flex font-mono ml-2 text-cyan-500 dark:text-cyan-400">
-        <span className="dark:text-zinc-50">&lt;/</span>
-        <span>{experience.type === 'work' ? 'Work' : 'Education'}</span>
-        <span className="dark:text-zinc-50">&gt;</span>
-      </span>
     </div>
   );
 }
