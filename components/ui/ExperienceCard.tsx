@@ -30,7 +30,10 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
             {/* Description */}
             <ul className="space-y-2 list-disc list-outside pl-4 marker:text-zinc-500">
               {experience.description.map((desc, index) => (
-                <li key={index} className="pl-2 text-sm text-zinc-300">
+                <li
+                  key={index}
+                  className="pl-2 text-sm text-zinc-700 dark:text-zinc-300"
+                >
                   {desc}
                 </li>
               ))}
