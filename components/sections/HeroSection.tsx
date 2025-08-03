@@ -2,7 +2,7 @@ import { personalInfo, technologies } from '@/lib/data';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <div className="container space-y-8 xl:px-16">

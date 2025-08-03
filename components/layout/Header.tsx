@@ -2,7 +2,7 @@ import { Dumbbell, ChevronRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import Link from 'next/link';
 
-export default function Header() {
+export function Header() {
   return (
     <div className="container">
       <header className="flex h-18 items-center justify-between">

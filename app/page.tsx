@@ -1,5 +1,5 @@
-import Header from '@/components/layout/Header';
-import HeroSection from '@/components/sections/HeroSection';
+import { Header } from '@/components/layout/Header';
+import { HeroSection } from '@/components/sections/HeroSection';
 import { WorkSection } from '@/components/sections/WorkSection';
 import { EducationSection } from '@/components/sections/EducationSection';
 
@@ -16,12 +16,8 @@ export default function Home() {
           <EducationSection />
         </div>
       </div>
-      {/* <div className="container mx-auto max-w-4xl">
-        <div className="scroll-mt-8 space-y-8">
-          
-        </div>
-      </div> */}
-      {/* <EducationSection /> */}
+      <div className="container mx-auto max-w-4xl"></div>
+
       {/* <ProjectsSection /> */}
     </div>
   );
