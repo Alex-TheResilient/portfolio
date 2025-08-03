@@ -2,6 +2,7 @@ import { Header } from '@/components/layout/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { WorkSection } from '@/components/sections/WorkSection';
 import { EducationSection } from '@/components/sections/EducationSection';
+import { Footer } from '@/components/layout/Footer';
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
           <EducationSection />
         </div>
       </div>
-      <div className="container mx-auto max-w-4xl"></div>
+      <div className="container mx-auto my-8">
+        <Footer />
+      </div>
 
       {/* <ProjectsSection /> */}
     </div>
