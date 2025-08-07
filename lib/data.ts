@@ -105,8 +105,8 @@ export const experiences: Experience[] = [
     subtitle: 'Bachelor of System Engineering',
     duration: '2025',
     description: [
-      'I had the opportunity to intern at a technology company where I got to work on real-world software development projects. During my internship, I learned how to work in a team, manage my time, and apply my knowledge to solving real-world problems.',
-      'These experiences nurtured a passion for technology and a willingness to adapt to change.',
+      'Developed a strong foundation in software engineering principles, data structures, algorithms, and system design. Gained experience in multiple programming languages and database management systems.',
+      'Completed projects involving software architecture, web development, and database design. These academic experiences built my analytical thinking skills and prepared me for professional software development.',
     ],
     type: 'education',
     technologies: ['Java', 'Python', 'SQL', 'Teamwork', 'Git/GitHub'],
