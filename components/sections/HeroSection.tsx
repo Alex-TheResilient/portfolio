@@ -1,11 +1,41 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { personalInfo, socialLinks } from '@/lib/data';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Componente del indicador de scroll
+const ScrollIndicator = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY < 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20 transition-opacity duration-300">
+      <ChevronDown
+        className="w-7 h-7 text-cyan-500 animate-bounce cursor-pointer hover:text-cyan-800 dark:hover:text-gray-200 transition-all"
+        onClick={() =>
+          window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+        }
+      />
+    </div>
+  );
+};
+
 export function HeroSection() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div className="relative flex h-screen flex-col items-center justify-center">
       <div className="container space-y-8 xl:px-16">
         <div className="min-h-[calc(100vh-56px)] items-center space-y-8 md:flex md:space-y-0">
           <div className="grid items-center gap-x-16 md:grid-cols-2 xl:gap-x-28">
@@ -103,6 +133,9 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <ScrollIndicator />
     </div>
   );
 }

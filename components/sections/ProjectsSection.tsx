@@ -2,7 +2,7 @@ import { technologies } from '@/lib/data';
 
 export function ProjectsSection() {
   return (
-    <section className="-mt-15">
+    <section className="-mt-7">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold font-mono mb-8 text-center">
           Skills & Projects
