@@ -1,6 +1,7 @@
-import { personalInfo, technologies } from '@/lib/data';
+import { personalInfo, socialLinks } from '@/lib/data';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function HeroSection() {
   return (
@@ -62,7 +63,7 @@ export function HeroSection() {
                 <h2 className="select-none bg-gradient-to-t from-zinc-950 to-zinc-600 bg-clip-text pt-1 font-display-pacifico text-8xl text-transparent dark:from-zinc-500 dark:to-white">
                   Hi
                 </h2>
-                <p className="font-mono text-xl lg:text-2xl dark:text-white">
+                <p className="font-mono text-xl lg:text-3xl dark:text-white">
                   &lt;<span className="text-red-500">p</span>&gt;
                   {personalInfo.title}
                   &lt;/<span className="text-red-500">p</span>&gt;
@@ -70,7 +71,7 @@ export function HeroSection() {
               </div>
 
               {/* About Text */}
-              <div className="text-balance text-center font-mono text-sm">
+              <div className="text-balance text-center font-mono text-base">
                 <p>
                   &lt;<span className="text-cyan-700">About</span>&gt;
                   {personalInfo.about}
@@ -78,18 +79,24 @@ export function HeroSection() {
                 </p>
               </div>
 
-              {/* Tech Stack */}
-              <div className="backdrop-blur rounded-2xl p-4 shadow-sm flex gap-3 justify-center">
-                {technologies.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="w-10 h-10 p-1.5 bg-gray-200 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                    title={tech.name}
+              {/* Social Media */}
+              <div className="backdrop-blur-sm bg-white/10 dark:bg-zinc-900/20 border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-6 shadow-lg flex gap-4 justify-center">
+                {socialLinks.map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative w-12 h-12 p-2.5 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl flex items-center justify-center hover:border-cyan-300 dark:hover:border-cyan-500 hover:scale-130 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
+                    title={social.platform}
                   >
-                    <svg className="w-5 h-5">
-                      <use href={`/icons/sprite.svg#${tech.icon}`} />
+                    <svg className="w-5 h-5 text-zinc-600 dark:text-zinc-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors duration-200">
+                      <use href={`/icons/sprite.svg#${social.icon}`} />
                     </svg>
-                  </div>
+
+                    {/* Glow effect on hover */}
+                    <div className="absolute inset-0 rounded-xl bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 -z-10"></div>
+                  </Link>
                 ))}
               </div>
             </div>
