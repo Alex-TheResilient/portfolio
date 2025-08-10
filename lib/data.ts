@@ -18,16 +18,6 @@ export interface SocialLink {
   icon: string;
 }
 
-export interface Project {
-  title: string;
-  description: string;
-  role: string;
-  stack: Technology[];
-  githubUrl?: string;
-  image: string;
-  link: string;
-}
-
 export interface Experience {
   title: string;
   subtitle: string;
@@ -48,31 +38,12 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const technologies: Technology[] = [
-  { name: 'TypeScript', icon: 'typescript' },
-  { name: 'JavaScript', icon: 'javascript' },
+  { name: 'Java', icon: 'java' },
   { name: 'React', icon: 'react' },
   { name: 'Node.js', icon: 'nodejs' },
-  { name: 'Next.js', icon: 'nextjs' },
-  { name: 'Tailwind CSS', icon: 'tailwindcss' },
-  { name: 'Git', icon: 'git' },
+  { name: 'TypeScript', icon: 'typescript' },
+  { name: 'Python', icon: 'python' },
   { name: 'PostgreSQL', icon: 'postgresql' },
-];
-
-// To change
-export const projects: Project[] = [
-  {
-    title: 'Pomodoro Timer',
-    description:
-      'A web application that helps users manage their time using the Pomodoro Technique.',
-    role: 'Developer',
-    stack: [
-      { name: 'Next.js', icon: 'nextjs' },
-      { name: 'Tailwind CSS', icon: 'tailwindcss' },
-    ],
-    githubUrl: 'https://github.com/Alex-TheResilient/portfolio',
-    image: '/images/portfolio.png',
-    link: 'https://alex-the-resilient.vercel.app/',
-  },
 ];
 
 export const socialLinks: SocialLink[] = [
