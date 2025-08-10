@@ -16,7 +16,7 @@ export const projects: Project[] = [
     title: 'Sistema de Gestión de Documentación de Proyectos de Software',
     description:
       'Plataforma full-stack que automatiza la creación y gestión de documentación técnica para equipos de desarrollo. Centraliza la administración de requisitos, evidencias, riesgos y especificaciones.',
-    role: 'Full Stack Developer',
+    role: 'Backend Developer',
     technologies: [
       'React',
       'Node.js',
@@ -44,6 +44,29 @@ export const projects: Project[] = [
       '/images/template-automation/8.avif',
       '/images/template-automation/9.avif',
       '/images/template-automation/10.avif',
+    ],
+  },
+  {
+    id: 'nextjs-dashboard',
+    title: 'Dashboard de Gestión Empresarial',
+    description:
+      'Dashboard completo con Next.js para gestionar usuarios, clientes e invoices. Incluye autenticación, paginación, búsqueda, formularios CRUD y componentes visuales con estados de carga.',
+    role: 'Personal Project',
+    technologies: ['Next.js', 'React', 'TypeScript'], // Agrega las que uses
+    features: [
+      'Sistema de autenticación completo',
+      'Gestión CRUD de usuarios, clientes y facturas',
+      'Dashboards con gráficos y visualizaciones',
+      'Búsqueda avanzada y paginación',
+      'Formularios dinámicos para crear/editar registros',
+      'Estados de carga con skeleton components',
+    ],
+    githubUrl: 'https://github.com/tu-usuario/nextjs-dashboard',
+    demoUrl: 'https://nextjs-dashboard-phi-three-37.vercel.app/',
+    images: [
+      '/images/nextjs-dashboard/1.avif',
+      '/images/nextjs-dashboard/2.avif',
+      // ... más imágenes
     ],
   },
 ];

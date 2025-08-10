@@ -39,74 +39,80 @@ export function ProjectCard({ project, selectedTech }: ProjectCardProps) {
 
         {/* Index */}
         {project.images.length > 1 && (
-          <div className="absolute top-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-            {project.images.map((_, index) => (
-              <div
-                key={index}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 border-2 ${
-                  index === currentImageIndex
-                    ? 'bg-cyan-500 border-cyan-500 scale-125 shadow-lg'
-                    : 'bg-transparent border-cyan-400/80'
-                }`}
-              />
-            ))}
+          <div className="absolute top-4 right-4">
+            <div className="bg-black/40 dark:bg-black/40 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
+              <span className="text-white text-xs font-medium">
+                {currentImageIndex + 1}/{project.images.length}
+              </span>
+            </div>
           </div>
         )}
 
-        {/* Project Content */}
-        <div className="content rounded-3xl font-mono bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm p-2 pt-8 md:p-7 pb-12 lg:max-w-lg w-full lg:absolute top-50 left-1/3 shadow-xl">
-          {/* Title */}
-          <h2 className="text-lg font-bold mt-1 text-zinc-900 dark:text-zinc-100 leading-tight">
-            {project.title}
-          </h2>
-          {/* Description */}
-          <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
-            {project.description}
-          </p>
-          {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2 my-4">
-            {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                className={`
-                  text-xs px-2 py-1 rounded-full font-medium
-                  ${
-                    tech === selectedTech
-                      ? 'bg-cyan-100 dark:bg-cyan-900/40 border border-cyan-300 dark:border-cyan-600 text-cyan-700 dark:text-cyan-300'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
-                  }
-                `}
-              >
-                {tech}
-              </span>
-            ))}
+        {/* Rol */}
+        <div>
+          <div className="absolute top-6 left-6 z-20">
+            <span className="bg-black/40 dark:bg-black/40 backdrop-blur-md text-zinc-100 dark:text-white text-xs px-3 py-1.5 rounded-full border border-white/30 dark:border-white/20 font-medium shadow-lg">
+              {project.role}
+            </span>
           </div>
-          {/* Botones de acción */}
-          <div className="flex gap-3 mt-2 md:mt-5">
-            {project.githubUrl && (
-              <Link
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:underline p-3 px-2 rounded-lg bg-black dark:bg-zinc-700 text-white font-bold text-xs hover:bg-gray-800 dark:hover:bg-zinc-600 transition-colors"
-              >
-                <svg className="size-4">
-                  <use href={`/icons/sprite.svg#github`} />
-                </svg>
-                View Code
-              </Link>
-            )}
-            {project.demoUrl && (
-              <Link
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:underline p-3 px-2 rounded-lg bg-black dark:bg-zinc-700 text-white font-bold text-xs hover:bg-gray-800 dark:hover:bg-zinc-600 transition-colors"
-              >
-                <FolderGit2 className="size-4" />
-                Ver Demo
-              </Link>
-            )}
+        </div>
+
+        {/* Project Content */}
+        <div className="absolute top-1/2 left-0 right-0 p-6">
+          <div className="bg-white/20 dark:bg-white/50 backdrop-blur-md rounded-xl p-6 border border-white/20 dark:border-white/10 shadow-2xl">
+            {/* Title */}
+            <h2 className="text-zinc-600 dark:text-zinc-700 text-xl font-bold mb-3 leading-tight">
+              {project.title}
+            </h2>
+
+            {/* Description */}
+            <p className="text-zinc-700 dark:text-zinc-700 text-base mb-4 leading-relaxed line-clamp-3">
+              {project.description}
+            </p>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className={`text-xs px-3 py-1.5 rounded-full backdrop-blur-sm font-medium transition-all duration-200 ${
+                    tech === selectedTech
+                      ? 'bg-cyan-400/30 text-cyan-700 dark:text-cyan-700 border border-cyan-300/30 shadow-lg shadow-cyan-400/20'
+                      : 'dark:bg-white/20 bg-zinc-300 text-zinc-700 dark:text-zinc-600 border border-white/20 hover:bg-white/30'
+                  }`}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Button */}
+            <div className="flex gap-3">
+              {project.githubUrl && (
+                <Link
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white/20 hover:bg-white/30 dark:bg-white/10 dark:hover:bg-white/20 backdrop-blur-sm text-zinc-800 dark:text-zinc-700 font-medium text-sm py-2.5 px-4 rounded-lg border border-white/20 dark:border-white/10 transition-all duration-200 hover:border-white/40 dark:hover:border-white/30 hover:shadow-lg"
+                >
+                  <svg className="size-4">
+                    <use href={`/icons/sprite.svg#github`} />
+                  </svg>
+                  View Code
+                </Link>
+              )}
+              {project.demoUrl && (
+                <Link
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-cyan-500/30 hover:bg-cyan-400/40 dark:bg-cyan-500/20 dark:hover:bg-cyan-400/30 backdrop-blur-sm text-cyan-800 dark:text-cyan-700 font-medium text-sm py-2.5 px-4 rounded-lg border border-cyan-400/30 dark:border-cyan-400/20 transition-all duration-200 hover:border-cyan-300/50 dark:hover:border-cyan-300/40 hover:shadow-lg hover:shadow-cyan-400/20"
+                >
+                  <FolderGit2 className="size-4" />
+                  View Demo
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
