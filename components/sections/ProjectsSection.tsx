@@ -29,20 +29,39 @@ export function ProjectsSection() {
         </h2>
       </div>
 
+      <div className="text-center mb-6">
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+          Click on a technology to view related projects
+        </p>
+      </div>
+
       {/* Tech Stack */}
       <div className="flex flex-wrap gap-6 justify-center mb-8 py-4">
         <ul className="flex space-x-4">
           {technologies.map((tech) => (
             <li
               key={tech.name}
-              className="group relative flex items-center justify-center w-20 h-20 transition-all duration-500 hover:w-32"
+              className={`group relative flex items-center justify-center h-20 transition-all duration-500 ${
+                selectedTech === tech.name ? 'w-32' : 'w-20 hover:w-32'
+              }`}
             >
+              {/* Button */}
               <button
                 onClick={() => handleTechClick(tech.name)}
-                className="w-full h-full pointer-events-auto p-2 flex items-center justify-center bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-full hover:border-cyan-700 dark:hover:border-cyan-300 hover:shadow-lg transition-all duration-300 ease-out"
+                className={`w-full h-full pointer-events-auto p-2 flex items-center justify-center bg-white dark:bg-zinc-900 border rounded-full transition-all duration-300 ease-out cursor-pointer hover:scale-105 ${
+                  selectedTech === tech.name
+                    ? 'border-cyan-500 dark:border-cyan-400 shadow-lg shadow-cyan-400/20 bg-cyan-50 dark:bg-cyan-900/20 scale-105'
+                    : 'border-zinc-200 dark:border-zinc-700 hover:border-cyan-700 dark:hover:border-cyan-300 hover:shadow-lg hover:bg-cyan-50 dark:hover:bg-cyan-900/10'
+                }`}
               >
                 {/* Icon */}
-                <svg className="w-8 h-8 object-contain text-zinc-700 dark:text-zinc-300 ">
+                <svg
+                  className={`w-8 h-8 object-contain transition-colors duration-200 ${
+                    selectedTech === tech.name
+                      ? 'text-cyan-600 dark:text-cyan-400'
+                      : 'text-zinc-700 dark:text-zinc-300 group-hover:text-cyan-600 dark:group-hover:text-cyan-400'
+                  }`}
+                >
                   <use href={`/icons/sprite.svg#${tech.icon}`} />
                 </svg>
               </button>
@@ -72,7 +91,7 @@ export function ProjectsSection() {
 
       {/* Grid 2 columns */}
       {filteredProjects.length > 0 && (
-        <div className="container mx-auto px-4 mb-12">
+        <div className="container mx-auto px-4 mb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {filteredProjects.map((project) => (
               <ProjectCard

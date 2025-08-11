@@ -12,10 +12,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'sistema-catalogo-requisitos',
-    title: 'Sistema de Gestión de Documentación de Proyectos de Software',
+    id: 'system-automation-requirements',
+    title: 'Software Project Documentation Management System',
     description:
-      'Plataforma full-stack que automatiza la creación y gestión de documentación técnica para equipos de desarrollo. Centraliza la administración de requisitos, evidencias, riesgos y especificaciones.',
+      'Full-stack platform that automates the creation and management of technical documentation for development teams. Centralizes the administration of requirements, evidence, risks, and specifications.',
     role: 'Backend Developer',
     technologies: [
       'React',
@@ -48,25 +48,25 @@ export const projects: Project[] = [
   },
   {
     id: 'nextjs-dashboard',
-    title: 'Dashboard de Gestión Empresarial',
+    title: 'Business Management Dashboard',
     description:
-      'Dashboard completo con Next.js para gestionar usuarios, clientes e invoices. Incluye autenticación, paginación, búsqueda, formularios CRUD y componentes visuales con estados de carga.',
+      'Complete dashboard built with Next.js to manage users, clients, and invoices. Includes authentication, pagination, search, CRUD forms, and visual components with loading states.',
     role: 'Personal Project',
-    technologies: ['Next.js', 'React', 'TypeScript'], // Agrega las que uses
+    technologies: ['Next.js', 'React', 'TypeScript'],
     features: [
-      'Sistema de autenticación completo',
-      'Gestión CRUD de usuarios, clientes y facturas',
-      'Dashboards con gráficos y visualizaciones',
-      'Búsqueda avanzada y paginación',
-      'Formularios dinámicos para crear/editar registros',
-      'Estados de carga con skeleton components',
+      'Full authentication system',
+      'CRUD management for users, clients, and invoices',
+      'Dashboards with charts and visualizations',
+      'Advanced search and pagination',
+      'Dynamic forms for creating/editing records',
+      'Loading states with skeleton components',
     ],
     githubUrl: 'https://github.com/tu-usuario/nextjs-dashboard',
     demoUrl: 'https://nextjs-dashboard-phi-three-37.vercel.app/',
     images: [
       '/images/nextjs-dashboard/1.avif',
       '/images/nextjs-dashboard/2.avif',
-      // ... más imágenes
+      // ... more images
     ],
   },
 ];
