@@ -44,6 +44,7 @@ export const technologies: Technology[] = [
   { name: 'TypeScript', icon: 'typescript' },
   { name: 'Python', icon: 'python' },
   { name: 'PostgreSQL', icon: 'postgresql' },
+  { name: 'Docker', icon: 'docker' },
 ];
 
 export const socialLinks: SocialLink[] = [
