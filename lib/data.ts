@@ -38,11 +38,11 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const technologies: Technology[] = [
-  { name: 'Java', icon: 'java' },
-  { name: 'React', icon: 'react' },
+  // { name: 'Java', icon: 'java' },
   { name: 'Node.js', icon: 'nodejs' },
   { name: 'TypeScript', icon: 'typescript' },
-  { name: 'Python', icon: 'python' },
+  { name: 'React', icon: 'react' },
+  // { name: 'Python', icon: 'python' },
   { name: 'PostgreSQL', icon: 'postgresql' },
   { name: 'Docker', icon: 'docker' },
 ];
